@@ -11,7 +11,7 @@ import (
 	"time"
 )
 
-func GetImages(pAuth datastruct.PexelsAuth, query, perPage, width, height, currentPage, size string) {
+func GetImages(pAuth datastruct.PexelsAuth, query, perPage, width, height, currentPage, size, directory string) {
 	client := &http.Client{}
 	req, err := http.NewRequest("GET", pAuth.Url, nil)
 	if err != nil {
@@ -67,14 +67,14 @@ func GetImages(pAuth datastruct.PexelsAuth, query, perPage, width, height, curre
 		img = pexelResp.Photos[0].Src.Large2X
 	}
 
-	err = extractImage(img, time.Now().Format("20060102150405-temp.jpg"))
+	err = extractImage(img, time.Now().Format("20060102150405-temp.jpg"), directory)
 	if err != nil {
 		fmt.Println(err)
 		return
 	}
 }
 
-func extractImage(url, filename string) error {
+func extractImage(url, filename, directory string) error {
 	response, err := http.Get(url)
 	if err != nil {
 		fmt.Println(err)
@@ -88,7 +88,7 @@ func extractImage(url, filename string) error {
 		return err
 	}
 
-	file, err := os.Create("temp/" + filename)
+	file, err := os.Create(directory + filename)
 	if err != nil {
 		return err
 	}
