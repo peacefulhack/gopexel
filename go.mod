@@ -1,4 +1,4 @@
-module peacefulhack/goPexel
+module github.com/peacefulhack/goPexel
 
 go 1.20
 
