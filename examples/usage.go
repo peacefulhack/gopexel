@@ -2,9 +2,10 @@ package examples
 
 import (
 	"fmt"
-	"peacefulhack/goPexel/app/models"
-	datastruct2 "peacefulhack/goPexel/app/shared/datastruct"
-	"peacefulhack/goPexel/app/shared/utils"
+	"github.com/peacefulhack/goPexel/app/models"
+	//"peacefulhack/goPexel/app/models"
+	datastruct2 "github.com/peacefulhack/goPexel/app/shared/datastruct"
+	"github.com/peacefulhack/goPexel/app/shared/utils"
 	"strconv"
 )
 
