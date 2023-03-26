@@ -3,10 +3,10 @@ package models
 import (
 	"encoding/json"
 	"fmt"
+	"github.com/peacefulhack/goPexel/app/shared/datastruct"
 	"io"
 	"net/http"
 	"os"
-	"peacefulhack/goPexel/app/shared/datastruct"
 	"strings"
 	"time"
 )
