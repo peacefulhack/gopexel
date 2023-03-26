@@ -18,5 +18,5 @@ func main() {
 	PexAuth.Api = env[0]
 	PexAuth.Url = env[1]
 	ran := utils.Randomizer(100, 1)
-	models.GetImages(PexAuth, "dog", "1", "1920", "1080", strconv.Itoa(ran), "large2x")
+	models.GetImages(PexAuth, "dog", "1", "1920", "1080", strconv.Itoa(ran), "large2x", "temp/")
 }
