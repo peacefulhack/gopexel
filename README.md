@@ -1,4 +1,4 @@
-# gopexel
+# goPexel
 Simple wrapper for Pexels API, all you need to do is create .env file, and define
 ```.env
 PEXELSAPIKEY=<YOUR_API_KEY>
